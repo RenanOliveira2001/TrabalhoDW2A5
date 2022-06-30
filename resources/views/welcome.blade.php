@@ -23,7 +23,8 @@
             <img src="/img/disciplinas/{{ $disciplina->image }}" alt="{{ $disciplina->nome_disciplina }}">
             <div class="card-body">
                 <h5 class="card-title">{{ $disciplina->nome_disciplina }}</h5>
-                <a href="/disciplinas/{{ $disciplina->id }}" class="btn btn-primary">Saber mais</a>
+                <p class="card-participants"> {{ $disciplina->sigla }} </p>
+                <a href="/disciplinas/{{ $disciplina->id }}" class="btn btn-primary">Saber Mais</a>
             </div>
         </div>
         @endforeach

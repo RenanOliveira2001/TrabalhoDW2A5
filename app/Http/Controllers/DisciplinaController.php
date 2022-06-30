@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Disciplina;
+use App\Models\User;
 
 Class DisciplinaController extends Controller{
     public function index() {
@@ -74,7 +75,7 @@ Class DisciplinaController extends Controller{
 
         Disciplina::findOrFail($id)->delete();
 
-        return redirect('/')->with('msg', 'Disciplina excluída com sucesso!');
+        return redirect('/dashboard')->with('msg', 'Disciplina excluída com sucesso!');
 
     }
 
@@ -99,7 +100,15 @@ Class DisciplinaController extends Controller{
 
         Disciplina::findOrFail($request->id)->update($data);
 
-        return redirect('/')->with('msg', 'Disciplina editada com sucesso!');
+        return redirect('/dashboard')->with('msg', 'Disciplina editada com sucesso!');
+
+    }
+
+    public function dashboard() {
+
+        $disciplinas = Disciplina::all();
+
+        return view('disciplinas.dashboard',['disciplinas' => $disciplinas]);
 
     }
 }

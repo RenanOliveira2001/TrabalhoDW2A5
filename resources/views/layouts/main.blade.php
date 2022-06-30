@@ -28,6 +28,9 @@
                 <a href="/" class="nav-link">Disciplinas</a>
               </li>
               <li class="nav-item">
+                <a href="/dashboard" class="nav-link">Disciplinas Cadastradas</a>
+              </li>
+              <li class="nav-item">
                 <a href="/disciplinas/cadastro" class="nav-link">Cadastrar Disciplinas</a>
               </li>
               @auth
