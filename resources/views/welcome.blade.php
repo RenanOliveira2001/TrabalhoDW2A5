@@ -20,7 +20,7 @@
     <div id="cards-container" class="row">
         @foreach($disciplinas as $disciplina)
         <div class="card col-md-3">
-            <img src="/img/disciplinas/{{ $disciplina->image }}" alt="{{ $disciplina->nome_disciplina }}">
+            <img src="/public/img/disciplinas/{{ $disciplina->image }}" alt="{{ $disciplina->nome_disciplina }}">
             <div class="card-body">
                 <h5 class="card-title">{{ $disciplina->nome_disciplina }}</h5>
                 <p class="card-participants"> {{ $disciplina->sigla }} </p>
